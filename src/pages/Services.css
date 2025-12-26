@@ -1,0 +1,119 @@
+.services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.service-item {
+    background-color: white;
+    border-radius: var(--radius-lg);
+    padding: 3rem;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.service-item:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-5px);
+}
+
+.service-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+}
+
+.service-content p {
+    font-size: 1.1rem;
+    color: var(--color-text);
+    margin-bottom: 2rem;
+    max-width: 800px;
+}
+
+.service-topics {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.service-topics li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.check-icon {
+    color: var(--color-accent);
+}
+
+/* Insurance Section */
+.insurance-section {
+    background-color: var(--color-bg);
+}
+
+.insurance-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.insurance-card {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: var(--radius-md);
+    text-align: left;
+    box-shadow: var(--shadow-sm);
+}
+
+.insurance-card h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--color-primary);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    padding-bottom: 1rem;
+}
+
+.insurance-list,
+.payment-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+}
+
+.payment-list {
+    grid-template-columns: 1fr;
+}
+
+.insurance-list li,
+.payment-list li {
+    padding: 0.5rem;
+    background-color: var(--color-bg);
+    border-radius: var(--radius-sm);
+    text-align: center;
+    font-size: 0.95rem;
+    color: var(--color-text);
+}
+
+.note {
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    font-style: italic;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .service-item {
+        padding: 2rem;
+    }
+
+    .insurance-list {
+        grid-template-columns: 1fr;
+    }
+}
